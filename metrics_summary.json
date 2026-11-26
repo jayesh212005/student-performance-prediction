@@ -1,0 +1,150 @@
+{
+  "dataset": {
+    "total_records": 649,
+    "num_features": 10,
+    "target": "G3 (Final Grade, 0-20)",
+    "splits": {
+      "train": 389,
+      "validation": 130,
+      "test": 130
+    }
+  },
+  "best_model_name": "Linear Regression",
+  "models": {
+    "Linear Regression": {
+      "best_params": {},
+      "validation": {
+        "mae": 0.7153,
+        "rmse": 0.997,
+        "r2": 0.8975
+      },
+      "test": {
+        "mae": 0.906,
+        "rmse": 1.4528,
+        "r2": 0.8068
+      }
+    },
+    "Ridge Regression": {
+      "best_params": {
+        "alpha": 0.1
+      },
+      "validation": {
+        "mae": 0.7152,
+        "rmse": 0.9971,
+        "r2": 0.8975
+      },
+      "test": {
+        "mae": 0.906,
+        "rmse": 1.4529,
+        "r2": 0.8068
+      }
+    },
+    "Decision Tree": {
+      "best_params": {
+        "max_depth": 5,
+        "min_samples_leaf": 5
+      },
+      "validation": {
+        "mae": 0.7254,
+        "rmse": 1.0112,
+        "r2": 0.8946
+      },
+      "test": {
+        "mae": 0.8765,
+        "rmse": 1.5508,
+        "r2": 0.7798
+      }
+    }
+  },
+  "error_analysis": {
+    "mean_error": 0.0828,
+    "median_abs_error": 0.705,
+    "max_abs_error": 9.49,
+    "largest_errors": [
+      {
+        "G1": 11,
+        "G2": 9,
+        "absences": 0,
+        "studytime": 1,
+        "failures": 2,
+        "actual_G3": 0.0,
+        "predicted_G3": 9.49,
+        "error": 9.49
+      },
+      {
+        "G1": 8,
+        "G2": 6,
+        "absences": 0,
+        "studytime": 1,
+        "failures": 1,
+        "actual_G3": 0.0,
+        "predicted_G3": 6.35,
+        "error": 6.35
+      },
+      {
+        "G1": 10,
+        "G2": 10,
+        "absences": 0,
+        "studytime": 1,
+        "failures": 0,
+        "actual_G3": 16.0,
+        "predicted_G3": 9.84,
+        "error": -6.16
+      },
+      {
+        "G1": 0,
+        "G2": 11,
+        "absences": 4,
+        "studytime": 2,
+        "failures": 0,
+        "actual_G3": 11.0,
+        "predicted_G3": 8.39,
+        "error": -2.61
+      },
+      {
+        "G1": 6,
+        "G2": 9,
+        "absences": 0,
+        "studytime": 2,
+        "failures": 0,
+        "actual_G3": 11.0,
+        "predicted_G3": 8.42,
+        "error": -2.58
+      }
+    ]
+  },
+  "fairness_audit": {
+    "sex": [
+      {
+        "group": "F",
+        "count": 76,
+        "avg_actual_G3": 13.07,
+        "avg_predicted_G3": 13.1,
+        "mae": 0.936
+      },
+      {
+        "group": "M",
+        "count": 54,
+        "avg_actual_G3": 11.56,
+        "avg_predicted_G3": 11.71,
+        "mae": 0.864
+      }
+    ],
+    "address": [
+      {
+        "group": "R",
+        "count": 32,
+        "avg_actual_G3": 11.38,
+        "avg_predicted_G3": 11.36,
+        "mae": 0.971
+      },
+      {
+        "group": "U",
+        "count": 98,
+        "avg_actual_G3": 12.79,
+        "avg_predicted_G3": 12.9,
+        "mae": 0.885
+      }
+    ]
+  }
+}
